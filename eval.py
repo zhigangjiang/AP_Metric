@@ -61,7 +61,7 @@ def get_gt_results(classname):
 def eval(classname, iou_thresh=0.5, use_07_metric=True, show_curve=False):
     dt_results = get_dt_results(classname)
     gt_results = get_gt_results(classname)
-    # show(dt_results, gt_results)
+    show(dt_results, gt_results)
     ids = dt_results.keys()
     rec, prec, ap = calc_eval(ids, dt_results, gt_results, calc_ious, iou_thresh, use_07_metric, show_curve)
     return rec, prec, ap

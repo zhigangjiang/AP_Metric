@@ -6,3 +6,14 @@
 观察上述PR值的规律会发现，随着score的阈值的增大，预测框总数会一直减小，而TP却会有时保持不变，有时变小，所以会出现同一Recall对应多组Precision的情况。最终在计算AP时，我们只需要取每个Recall值对应的最大Precision进行计算即可。因为A类别一共有6个gt，所以Recall的值应该是从1/6~6/6共6个，也就是要取6组PR值计算平均Precision，因为这个例子中没有出现Recall=6/6的情况，所以R=6/6时的Precision算作0，即类别A的AP=(1/1 + 2/2 + 3/3 + 4/4+ 5/8 + 0) / 6 = 0.7708。按照同样的方式计算其他类别的AP，最后求所有AP的均值，即可得到mAP。
 
 > 例子及解答来自[这儿](https://zhuanlan.zhihu.com/p/94597205)，更多概念请查看这个知乎回答
+
+# bbox
+![](src/show_boxes/id_1.jpg)
+![](src/show_boxes/id_2.jpg)
+![](src/show_boxes/id_3.jpg)
+![](src/show_boxes/id_4.jpg)
+![](src/show_boxes/id_5.jpg)
+
+# PR Curve
+![prc1](src/prc1.jpg)
+![prc1](src/prc2.jpg)
