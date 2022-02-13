@@ -7,7 +7,7 @@
 
 > 例子及解答来自[这儿](https://zhuanlan.zhihu.com/p/94597205)，更多概念请查看这个知乎回答
 
-# bbox
+# BBoxes
 ![](src/show_boxes/id_1.jpg)
 ![](src/show_boxes/id_2.jpg)
 ![](src/show_boxes/id_3.jpg)
